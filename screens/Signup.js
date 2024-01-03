@@ -15,9 +15,10 @@ export default function SignUp({ navigation }) {
             .then((userCredential) => {
                 // Register
                 const user = userCredential.user;
+                const photoURL = avatar ? avatar : 'https://gravatar.com/avatar/94d45dbdba988afacf30d916e7aaad69?s=200&d=mp&r=x';
                 updateProfile(user, {
                     displayName: name,
-                    photoURL: avatar ? avatar : 'https://gravatar.com/avatar/94d45dbdba988afacf30d916e7aaad69?s=200&d=mp&r=x'
+                    photoURL: photoURL
                 })
                     .then(() => {
                         alert('Registered, please login.');

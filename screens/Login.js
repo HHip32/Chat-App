@@ -13,7 +13,7 @@ export default function Login({ navigation }) {
             .then((userCredential) => {
                 const user = userCredential.user;
                 alert("Login Succesfully!")
-                navigation.navigate('Home')
+                navigation.navigate('Chat')
             })
             .catch((error) => {
                 // Đăng nhập thất bại, hiển thị thông báo lỗi
